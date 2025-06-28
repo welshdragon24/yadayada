@@ -1,1 +1,66 @@
-yadayada
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Click Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #counter {
+      font-size: 3em;
+      color: #007BFF;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+	
+  </style>
+</head>
+<body>
+  <h1>Click the Button!</h1>
+  <p>You've clicked the button this many times:</p>
+  <div id="counter">0</div>
+  <br/>
+  <button onclick="increaseCounter()">Click Me</button>
+  <br/>
+  <br/>
+  <button onclick="resetCounter()">Reset</button>
+
+  <script>
+    // Initial counter value
+    let count = 0;
+
+    function increaseCounter() {
+      count++;
+      document.getElementById("counter").textContent = count;
+    }
+	function resetCounter(){
+	  count = 0;
+	  document.getElementById("counter").textContent = count;
+	}
+  </script>
+
+</body>
+</html>
